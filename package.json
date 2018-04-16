@@ -1,6 +1,6 @@
 {
   "name": "frequency-counter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Count the number of occurrences of a repeating event per unit of time",
   "main": "index.js",
   "dependencies": {},
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/watson/frequency-counter#readme",
   "coordinates": [
-    55.777647,
-    12.59017
+    55.777623,
+    12.589892
   ]
 }
