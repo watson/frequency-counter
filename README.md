@@ -27,7 +27,7 @@ const server = http.createServer(function (req, res) {
   counter.inc()
  
   // return current frequency to client
-  res.end(counter.freq())
+  res.end('rpm: ' + counter.freq() + '\n')
 })
 
 server.listen(3000)
