@@ -39,7 +39,7 @@ test('don\'t count old data', function (t) {
     counter.inc()
     const expected = Math.min(i, 60)
     t.equal(counter.freq(), expected, 'after ' + i + ' seconds, the frequency should be ' + expected)
-    incTime(1000)
+    incTime(1)
   }
 
   releaseTime()
@@ -55,27 +55,27 @@ test('don\'t count old data, custom window', function (t) {
     counter.inc()
     const expected = Math.min(i, 5)
     t.equal(counter.freq(), expected, 'after ' + i + ' seconds, the frequency should be ' + expected)
-    incTime(1000)
+    incTime(1)
   }
 
   releaseTime()
   t.end()
 })
 
-const origNowFn = Date.now
+const origHrtimeFn = process.hrtime
 let stoppedTime
 
 function stopTime () {
-  stoppedTime = Date.now()
-  Date.now = function () {
+  stoppedTime = process.hrtime()
+  process.hrtime = function () {
     return stoppedTime
   }
 }
 
 function releaseTime () {
-  Date.now = origNowFn
+  process.hrtime = origHrtimeFn
 }
 
-function incTime (ms) {
-  stoppedTime += ms
+function incTime (s) {
+  stoppedTime[0] += s
 }

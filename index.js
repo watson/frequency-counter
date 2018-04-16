@@ -41,6 +41,5 @@ function sum (a, b) {
 }
 
 function epoch () {
-  // TODO: Use hrtime
-  return Math.floor(Date.now() / 1000)
+  return process.hrtime()[0]
 }
