@@ -1,0 +1,34 @@
+{
+  "name": "frequency-counter",
+  "version": "0.0.0",
+  "description": "Count the number of occurrences of a repeating event per unit of time",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^11.0.1",
+    "tape": "^4.9.0"
+  },
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/frequency-counter.git"
+  },
+  "keywords": [
+    "freq",
+    "frequency",
+    "freqency",
+    "calculate",
+    "calc",
+    "stat",
+    "stats",
+    "rpm"
+  ],
+  "author": "Thomas Watson <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/frequency-counter/issues"
+  },
+  "homepage": "https://github.com/watson/frequency-counter#readme"
+}
